@@ -12,6 +12,7 @@ from datetime import datetime
 import subprocess
 from collections import Counter 
 import shutil 
+import myLogger
 
 def getBranch(path):
     dict_ = { 
@@ -47,6 +48,10 @@ def getBranch(path):
         return 'master' 
 
 def getFileLength(file_):
+    '''
+    Inserted logging statement because data can be poisoned. 
+    '''
+    logObj.info('Dataset results: %s', str(file_))
     return sum(1 for line in open(file_, encoding='latin-1'))
 
 def getDevEmailForCommit(repo_path_param, hash_):
@@ -138,6 +143,10 @@ def getAllCommits(all_repos):
 
 def getAllFileCount(df_):
     tot_fil_size = 0 
+    '''
+    Inserted logging statement because data can be poisoned. 
+    '''
+    logObj.info('Dataset results: %s', str(df_))
     file_names_ =  np.unique( df_['FILE_FULL_PATH'].tolist() )
     for file_ in file_names_:
         tot_fil_size = tot_fil_size + getFileLength( file_ )
@@ -229,7 +238,8 @@ if __name__=='__main__':
 
     all_datasets = [GITHUB_RESULTS_FILE ] 
 
-    
+    logObj = myLogger.giveMeLoggingObject()
+
     getGeneralStats(all_datasets)
 
 

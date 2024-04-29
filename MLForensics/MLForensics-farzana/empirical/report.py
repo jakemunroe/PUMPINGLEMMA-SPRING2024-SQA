@@ -9,6 +9,7 @@ import pandas as pd
 import time 
 import datetime 
 import statistics
+import myLogger
 
 
 def giveTimeStamp():
@@ -41,6 +42,10 @@ def reportProp( res_file ):
     
     
 def reportDensity( res_file ):
+    '''
+    Inserted logging statement because data can be poisoned. 
+    '''
+    logObj.info('Input file results: %s', str(res_file))
     res_df = pd.read_csv(res_file) 
     fields2explore = ['DATA_LOAD_COUNT', 'MODEL_LOAD_COUNT', 'DATA_DOWNLOAD_COUNT',	'MODEL_LABEL_COUNT', 'MODEL_OUTPUT_COUNT',	
                       'DATA_PIPELINE_COUNT', 'ENVIRONMENT_COUNT', 'STATE_OBSERVE_COUNT',  'TOTAL_EVENT_COUNT'
@@ -58,6 +63,8 @@ def reportDensity( res_file ):
         
             
 if __name__=='__main__': 
+    logObj = myLogger.giveMeLoggingObject()
+    
     print('*'*100 )
     t1 = time.time()
     print('Started at:', giveTimeStamp() )

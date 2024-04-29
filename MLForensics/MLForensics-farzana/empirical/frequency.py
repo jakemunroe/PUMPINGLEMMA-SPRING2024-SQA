@@ -8,6 +8,7 @@ import os
 import pandas as pd 
 import time 
 import datetime 
+import myLogger
 
 def giveTimeStamp():
   tsObj = time.time()
@@ -23,6 +24,10 @@ def getAllSLOC(df_param, csv_encoding='latin-1' ):
     return total_sloc
 
 def reportProportion( res_file, output_file ):
+    '''
+    Inserted logging statement because data can be poisoned. 
+    '''
+    logObj.info('Input file results: %s', str(res_file))
     res_df = pd.read_csv( res_file )
     repo_names   = np.unique( res_df['REPO_FULL_PATH'].tolist() )
     
@@ -52,6 +57,10 @@ def reportProportion( res_file, output_file ):
 
 
 def reportEventDensity(res_file, output_file): 
+    '''
+    Inserted logging statement because data can be poisoned. 
+    '''
+    logObj.info('Input file results: %s', str(res_file))
     res_df = pd.read_csv(res_file) 
     repo_names   = np.unique( res_df['REPO_FULL_PATH'].tolist() )
     fields2explore = ['DATA_LOAD_COUNT', 'MODEL_LOAD_COUNT', 'DATA_DOWNLOAD_COUNT',	'MODEL_LABEL_COUNT', 'MODEL_OUTPUT_COUNT',	
@@ -88,7 +97,7 @@ if __name__=='__main__':
     print('Started at:', giveTimeStamp() )
     print('*'*100 )
 
-
+    logObj = myLogger.giveMeLoggingObject()
     # DATASET_NAME = 'TEST'
     # RESULTS_FILE = '/Users/arahman/Documents/OneDriveWingUp/OneDrive-TennesseeTechUniversity/Research/VulnStrategyMining/ForensicsinML/Output/V5_OUTPUT_TEST.csv'
 
