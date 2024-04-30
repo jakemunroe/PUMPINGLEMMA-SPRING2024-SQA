@@ -36,7 +36,12 @@ Below is an example of the output that we received:
 4. Now testing the commits.
    ![Screenshot 2024-04-29 at 2 46 45 PM](https://github.com/jakemunroe/PUMPINGLEMMA-SPRING2024-SQA/assets/144175666/2afbd3eb-4022-4b33-a9eb-5be55d88a929)
 
-
+5. Lessons Learned:
+   
+   Fuzzing involves bombarding software with randomized or unexpected inputs to find vulnerabilities. This technique can be used to detect vulnerabilities that could
+   cause crashes or expose security flaws. When completing this project, we learned how to select the appropriate methods for fuzzing as well as how the workflow of the process
+   works.
+   
 ## 4.c.
 We integrated forensics by adding logging into 5 methods in the empirical folder.
 The logging was used in methods that had files or dataframes as input as the data in these files can be poisoned and it is good practice to routinely check it.
