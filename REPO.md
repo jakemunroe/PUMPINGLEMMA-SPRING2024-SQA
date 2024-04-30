@@ -2,17 +2,17 @@
 ## Authors: Samarth Kumar, Davis Leeth, Jacob Munroe, and Nikhil Patel
 
 ### 4.a. 
-For the Git Hook, we utilized the following line to implement it:\
+For the Git Hook, we utilized the following line to implement it:
 
-`bandit -r  ./ -f csv -o scans/"$(date +"%Y_%m_%d_%I_%M_%p").csv"`\
+`bandit -r  ./ -f csv -o scans/"$(date +"%Y_%m_%d_%I_%M_%p").csv"`
 
-The output location for the code is in the home directory under the '/scans' folder where the CSV files are named in the format YYYY_MM_DD_HH_MM_AM/PM.csv in order to keep track of the scans as they are taken.\
+The output location for the code is in the home directory under the '/scans' folder where the CSV files are named in the format YYYY_MM_DD_HH_MM_AM/PM.csv in order to keep track of the scans as they are taken.
 
-Upon implementation we have been able to learn the importance of not only seeing the security vulnerabilities that can arise in code, but also the importance of seeing this before you commit code in order to allow for remediation.\
+Upon implementation we have been able to learn the importance of not only seeing the security vulnerabilities that can arise in code, but also the importance of seeing this before you commit code in order to allow for remediation.
 
-By tracking these vulnerabilities as they happen, one can also identify patterns that may occur in the way that they or their organization develops code with vulnerabilities along for them to analyze and fix issues from persisting.\
+By tracking these vulnerabilities as they happen, one can also identify patterns that may occur in the way that they or their organization develops code with vulnerabilities along for them to analyze and fix issues from persisting.
 
-Below is an example of the output that we received:\
+Below is an example of the output that we received:
 
 ### 4.c.
 We integrated forensics by adding logging into 5 methods in the empirical folder.
