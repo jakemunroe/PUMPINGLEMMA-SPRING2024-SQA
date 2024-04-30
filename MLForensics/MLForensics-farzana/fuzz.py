@@ -1,6 +1,5 @@
 # File that will be used to fuzz 5 methods of our choice.
 # Will be executed automatically from GitHub actions.
-# Simple change
 import traceback
 
 # Import your functions here; ensure the module paths and names are correct
