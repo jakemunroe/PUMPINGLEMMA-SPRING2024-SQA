@@ -1,6 +1,11 @@
-Report:
+# PUMPING LEMMA Report:
+## Authors: Samarth Kumar, Davis Leeth, Jacob Munroe, and Nikhil Patel
 
-4.c. We integrated forensics by adding logging into 5 methods in the empirical folder.
+### 4.a. 
+
+
+### 4.c.
+We integrated forensics by adding logging into 5 methods in the empirical folder.
 The logging was used in methods that had files or dataframes as input as the data in these files can be poisoned and it is good practice to routinely check it.
 
 Also, a myLogger.py file was added to facilitate the logging actions.
