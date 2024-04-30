@@ -14,6 +14,9 @@ By tracking these vulnerabilities as they happen, one can also identify patterns
 
 Below is an example of the output that we received:
 
+![image](https://github.com/jakemunroe/PUMPINGLEMMA-SPRING2024-SQA/assets/72417111/1bb60ccd-330b-4d37-b0cd-e81adbdee232)
+
+
 ### 4.c.
 We integrated forensics by adding logging into 5 methods in the empirical folder.
 The logging was used in methods that had files or dataframes as input as the data in these files can be poisoned and it is good practice to routinely check it.
