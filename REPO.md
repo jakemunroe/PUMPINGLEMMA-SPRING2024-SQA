@@ -44,7 +44,8 @@ Below is an example of the output that we received:
    
 ## 4.c.
 We integrated forensics by adding logging into 5 methods in the empirical folder.
-The logging was used in methods that had files or dataframes as input as the data in these files can be poisoned and it is good practice to routinely check it.
+The logging was used in methods that had files or dataframes as input as the data in these files can be poisoned and it is good practice to routinely check it. Logging is crucial in the software quality assurance world because it provides detailed insights into the application’s behavior, facilitating effective debugging and issue resolution. It allows teams to monitor the system in real time and understand the circumstances surrounding any failures or anomalies, thereby enhancing the overall reliability and performance of the software.
+We learned that by incorporating logging into critical methods, especially those handling external data, we could preemptively identify and mitigate issues that might corrupt the system or degrade its performance.
 
 Also, a **'myLogger.py' (/MLForensics/MLForensics-farzana/empirical/myLogger.py)** file was added to facilitate the logging actions.
 
